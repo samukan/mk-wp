@@ -7,15 +7,15 @@ get_header();
             if ( have_posts() ) :
                 while ( have_posts() ) :
                     the_post();
-                    the_title( '<h1>', '</h1>' );
+                    the_title('<h1>', '</h1>');
                     the_content();
                 endwhile;
             else :
-                _e( 'Sorry, no posts matched your criteria.', 'example-theme' );
+                _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
             endif;
             ?>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/map.svg" alt="Hero">
+        <?php the_custom_header_markup() ?>
     </section>
     <main>
         <section class="products">
